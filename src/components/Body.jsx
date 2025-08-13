@@ -13,13 +13,11 @@ const Body = () => {
   const navigate = useNavigate();
 
   const fetchUser = async () => {
-    console.log("Initial user data: " + userData);
     if (!userData) {
       try {
         var res = await axios.get(BASE_URL + "/profile/view", {
           withCredentials: true,
         });
-        console.log(res);
         dispatch(addUser(res.data));
       } catch (err) {
         if (err.status == 401) {
