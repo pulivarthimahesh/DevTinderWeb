@@ -26,7 +26,9 @@ const Connections = () => {
   if (!feed) return;
 
   if (feed.length <= 0)
-    return <h1 className="flex justify-center my-10">No users found!!!</h1>;
+    return (
+      <h1 className="flex justify-center my-10">No connections found!!!</h1>
+    );
 
   return (
     <div className="flex flex-col items-center justify-center my-10">

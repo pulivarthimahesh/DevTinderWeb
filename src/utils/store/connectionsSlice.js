@@ -7,7 +7,7 @@ const connectionsSlice = createSlice({
     addConnections: (state, actions) => actions.payload,
     removeConnection: (state, actions) => {
       let updatedArray = state.filter((user) => user._id != actions.payload);
-      state = updatedArray;
+      return (state = updatedArray);
     },
   },
 });
